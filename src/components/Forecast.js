@@ -1,5 +1,5 @@
 import React from "react";
-import "./weather.css";
+import "../weather.css";
 
 const Forecast = ({ forecastData }) => {
   const forecastList = forecastData.list.slice(0, 3).map((item) => (

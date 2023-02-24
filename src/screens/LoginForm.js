@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./weather.css";
+import "../weather.css";
 
 const LoginForm = ({ handleLogin }) => {
   const [username, setUsername] = useState("");

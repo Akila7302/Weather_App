@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import LoginForm from "./LoginForm";
-import Dashboard from "./Dashboard";
+import LoginForm from "./screens/LoginForm";
+import Dashboard from "./screens/Dashboard";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

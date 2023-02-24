@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from "axios";
-import "./weather.css";
-import SearchBar from "./SearchBar";
-import CurrentWeather from "./CurrentWeather";
-import Forecast from "./Forecast";
-import SevenDayForecast from "./SevenDayForecast";
+import "../weather.css";
+import SearchBar from "../components/SearchBar";
+import CurrentWeather from "../components/CurrentWeather";
+import Forecast from "../components/Forecast";
+import SevenDayForecast from "../components/SevenDayForecast";
 
 const API_KEY = "dd5d9ec9eaaaaec92bc20db8340348bd";
 
