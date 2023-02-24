@@ -11,6 +11,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--mdc-theme-background);
+  background: url('./assets/sunset.jpg') no-repeat center center/cover;
 }
 
 .container {
@@ -27,45 +28,99 @@ h1 {
   color: var(--mdc-theme-primary);
 }
 
-.search-bar {
+.login-form-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  height: 100vh;
 }
 
-.search-bar__input {
-  padding: 0.5rem;
-  margin-right: 1rem;
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
   border: none;
-  border-bottom: 2px solid var(--mdc-theme-primary);
-  color: var(--mdc-theme-primary);
-  font-size: 1.2rem;
-  font-weight: 500;
-  width: 100%;
-  transition: border-color 0.2s ease-in-out;
+  background-color: #f5f5f5;
+  font-size: 1rem;
 }
 
-.search-bar__input:focus {
-  outline: none;
-  border-color: var(--mdc-theme-secondary);
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  border-radius: 10px 0 0 10px;
+  font-size: 18px;
+  padding: 10px;
+  width: 300px;
+  border: none;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.search-btn {
+  border-radius: 0 10px 10px 0;
+  font-size: 18px;
+  padding: 10px 20px;
+  
+}
+
 
 .search-bar__button {
-  background-color: var(--mdc-theme-primary);
+  /* background-color: var(--mdc-theme-primary); */
   color: #ffffff;
+  background-color: #007bff;
   border: none;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .search-bar__button:hover {
-  background-color: var(--mdc-theme-secondary);
+  background-color: #0056b3;
 }
 
 .current-weather {
@@ -111,3 +166,91 @@ h1 {
   background-color: #ffffff;
   /* box-shadow: 0px 0px 5px rgba(0,  */
 }
+
+.forecast-container {
+  margin: 20px;
+}
+
+.forecast-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast-box {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 16px;
+  flex: 1;
+  margin: 0px 8px;
+  max-width: calc(33.33% - 16px);
+}
+
+.forecast-date {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0px;
+}
+
+.forecast-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.forecast-temp {
+  font-size: 28px;
+  margin: 12px 0px;
+}
+
+.forecast-desc {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.forecast-wind {
+  font-size: 14px;
+  margin: 8px 0px 0px 0px;
+}
+
+.current-weather {
+  text-align: center;
+}
+
+.current-weather-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-weather-temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.current-weather-description {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.seven-day-button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.seven-day-button:hover {
+  background-color: #0056b3;
+}
+
