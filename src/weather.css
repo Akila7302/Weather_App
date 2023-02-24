@@ -247,6 +247,11 @@ button[type="submit"]:hover {
   text-transform: capitalize;
 }
 
+.current-weather img {
+  width: 70px;
+  height: 70px;
+}
+
 .seven-day-button {
   display: block;
   margin: auto;
