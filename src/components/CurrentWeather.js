@@ -8,10 +8,8 @@ const CurrentWeather = ({ currentData }) => {
 
   const { name, main, weather } = currentData;
 
-  // Get the icon ID from the weather condition
   const iconId = weather[0].icon;
 
-  // Construct the URL for the icon image
   const iconUrl = `http://openweathermap.org/img/w/${iconId}.png`;
 
   return (

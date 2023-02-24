@@ -15,18 +15,21 @@ const Dashboard = ({ handleLogout }) => {
   const [forecastData, setForecastData] = useState(null);
   const [forecast7dayData, setForecast7dayData] = useState(null);
 
+  // Get current weather details
   const fetchCurrentWeather = async () => {
     const currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&units=metric&appid=${API_KEY}`;
     const currentResponse = await axios.get(currentUrl);
     setCurrentData(currentResponse.data);
   };
 
+  // Get 3 day forecast
   const fetchForecast = async () => {
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchTerm}&cnt=24&units=metric&appid=${API_KEY}`;
     const forecastResponse = await axios.get(forecastUrl);
     setForecastData(forecastResponse.data);
   };
 
+  // Get 7 day forecast
   const fetch7dayForecast = async () => {
     const forecast7dayUrl = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${searchTerm}&cnt=7&units=metric&appid=${API_KEY}`;
     const forecast7dayResponse = await axios.get(forecast7dayUrl);
@@ -36,17 +39,22 @@ const Dashboard = ({ handleLogout }) => {
   useEffect(() => {
     fetchCurrentWeather();
     fetchForecast();
+    fetch7dayForecast();
   }, []);
 
   const handleSearch = () => {
     setSearchTerm(searchTerm.trim());
     fetchCurrentWeather();
     fetchForecast();
+    fetch7dayForecast();
+  };
+
+  const handleViewMore = () => {
+    fetch7dayForecast();
   };
 
   return (
     <div className="container">
-      {/* <h1>Weather App</h1> */}
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -54,7 +62,7 @@ const Dashboard = ({ handleLogout }) => {
       />
       {currentData && <CurrentWeather currentData={currentData} />}
       {forecastData && <Forecast forecastData={forecastData} />}
-      <button className="seven-day-button" onClick={fetch7dayForecast}>
+      <button className="seven-day-button" onClick={handleViewMore}>
         View More
       </button>
       {forecast7dayData && <SevenDayForecast forecastData={forecast7dayData} />}
