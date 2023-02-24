@@ -28,6 +28,7 @@ h1 {
   color: var(--mdc-theme-primary);
 }
 
+/* Login Form */
 .login-form-container {
   display: flex;
   justify-content: center;
@@ -80,8 +81,9 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #0069d9;
 }
+/* End of login form */
 
-
+/* Search bar */
 .search-form {
   display: flex;
   justify-content: center;
@@ -104,7 +106,6 @@ button[type="submit"]:hover {
   
 }
 
-
 .search-bar__button {
   /* background-color: var(--mdc-theme-primary); */
   color: #ffffff;
@@ -122,7 +123,9 @@ button[type="submit"]:hover {
 .search-bar__button:hover {
   background-color: #0056b3;
 }
+/* End of search bar */
 
+/* Current weather of the selected locations */
 .current-weather {
   margin-bottom: 1rem;
   padding: 1rem;
@@ -160,8 +163,35 @@ button[type="submit"]:hover {
   font-weight: 500;
   color: #fff;
 }
+.current-weather {
+  text-align: center;
+}
 
+.current-weather-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.current-weather-temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.current-weather-description {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.current-weather img {
+  width: 70px;
+  height: 70px;
+}
+/* End of Current weather of the selected locations */
+
+/* 3 day forecast */
 .forecast {
   display: flex;
   flex-wrap: wrap;
@@ -224,34 +254,9 @@ button[type="submit"]:hover {
   font-size: 14px;
   margin: 8px 0px 0px 0px;
 }
+/* End of 3 day forecast */
 
-.current-weather {
-  text-align: center;
-}
-
-.current-weather-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.current-weather-temp {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 1rem 0;
-}
-
-.current-weather-description {
-  font-size: 1.5rem;
-  text-transform: capitalize;
-}
-
-.current-weather img {
-  width: 70px;
-  height: 70px;
-}
-
+/* 7 day forecast */
 .seven-day-button {
   display: block;
   margin: auto;
@@ -312,8 +317,9 @@ button[type="submit"]:hover {
 .description-vertical {
   font-size: 16px;
 }
+/* End of 7 day forecast */
 
-
+/* Logout button */
 .logout-btn {
   color: #fff;
   background-color: var(--mdc-theme-secondary);
@@ -333,4 +339,4 @@ button[type="submit"]:hover {
   top: 10px;
   right: 10px;
 }
-
+/* End of logout button */
