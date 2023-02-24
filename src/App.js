@@ -22,7 +22,13 @@ const App = () => {
       {isLoggedIn ? (
         <>
           <Dashboard />
-          <button onClick={handleLogout} className="logout-button">
+          {/* <div class="logout-btn">
+            <button type="button" onclick="logout()">
+              Logout
+            </button>
+          </div> */}
+
+          <button class="logout-btn" type="button" onClick={handleLogout}>
             Logout
           </button>
         </>

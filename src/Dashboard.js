@@ -5,7 +5,7 @@ import "./weather.css";
 import SearchBar from "./SearchBar";
 import CurrentWeather from "./CurrentWeather";
 import Forecast from "./Forecast";
-import LoginForm from "./LoginForm";
+import SevenDayForecast from "./SevenDayForecast";
 
 const API_KEY = "dd5d9ec9eaaaaec92bc20db8340348bd";
 
@@ -55,9 +55,9 @@ const Dashboard = ({ handleLogout }) => {
       {currentData && <CurrentWeather currentData={currentData} />}
       {forecastData && <Forecast forecastData={forecastData} />}
       <button className="seven-day-button" onClick={fetch7dayForecast}>
-        7-Day Forecast
+        View More
       </button>
-      {forecast7dayData && <Forecast forecastData={forecast7dayData} />}
+      {forecast7dayData && <SevenDayForecast forecastData={forecast7dayData} />}
     </div>
   );
 };
